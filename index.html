@@ -87,6 +87,7 @@
         // TODO
         var endpoint = document.getElementById('endpoint').value;
         document.getElementById('recordForm').style.display = 'none';
+        document.getElementById('recordIDcontainer').style.display = 'none';
         fetch(endpoint)
           .then(response => {
             if (!response.ok) {
@@ -109,6 +110,7 @@
         var endpoint = document.getElementById('endpoint').value;
         let recordId = prompt("Enter record id:");
         document.getElementById('recordForm').style.display = 'none';
+        document.getElementById('recordIDcontainer').style.display = 'none';
         endpoint = endpoint + '/' + recordId;
         fetch(endpoint)
           .then(response => {
@@ -133,6 +135,7 @@
         var endpoint = document.getElementById('endpoint').value;
         if(command === 'show'){
           document.getElementById('recordForm').style.display = 'inline';
+          document.getElementById('recordIDcontainer').style.display = 'none';
           document.getElementById('author').value = '';
           document.getElementById('title').value = '';
         }
@@ -215,6 +218,7 @@
         var endpoint = document.getElementById('endpoint').value;
         let recordId = prompt("Enter record id:");
         document.getElementById('recordForm').style.display = 'none';
+        document.getElementById('recordIDcontainer').style.display = 'none';
         endpoint = endpoint + '/' + recordId;
 
         fetch(endpoint, {
